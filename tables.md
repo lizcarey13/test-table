@@ -28,7 +28,7 @@ userid | country | region
 
 -------
 
-#### Find the number of monthly unique users
+#### Find the number of monthly unique users by country and region
 
 ```sql
 SELECT 
