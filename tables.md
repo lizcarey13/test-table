@@ -6,9 +6,11 @@ date | userid | content_posted
 2016-01-01 | 1 | photo
 2016-01-01 | 1 | video
 2016-01-01 | 1 | comment
-2016-02-01 | 1 | photo
-2016-02-01 | 2 | comment
-2016-02-23 | 2 | photo
+2016-01-01 | 1 | photo
+2016-01-01 | 2 | comment
+2016-01-23 | 2 | photo
+2016-01-25 | 7 | photo
+
 
 ### Table 2
 - Contains All user ID's by country and region
@@ -16,7 +18,9 @@ date | userid | content_posted
 userid | country | region
 --- | --- | ----
 1 | USA | North America
+2 | USA | North America
 3 | USA | North America
+4 | Mexico | North America
 5 | Cananda | North America
 7 | Iran | Middle East
 8 | Iraq | Middle East
