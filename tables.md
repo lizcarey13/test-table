@@ -31,19 +31,19 @@ userid | country | region
 #### Find the number of monthly unique users by country and region
 
 ```sql 
-SELECT month(date_posted), year(date_posted), country, region, count (distinct a.userid) 
-from table1 a 
-join table2 b ON 
+SELECT month(date_posted), year(date_posted), country, region, COUNT (distinct a.userid) 
+FROM table1 a 
+JOIN table2 b ON 
 (a.userid = b.userid)
-group by month(date_posted), year(date_posted), country, region
+GROUP BY month(date_posted), year(date_posted), country, region
 ;
 
 --- Less taxing count distinct query
-SELECT, mnth, yr, country, region, count(userid) from
-(select distinct month(date_posted) as mnth, year(date_posted) as yr, country, region, a.userid 
-from table1 a 
-join table2 b ON 
+SELECT mnth, yr, country, region, count(userid) from
+(SELECT DISTINCT month(date_posted) as mnth, year(date_posted) as yr, country, region, a.userid 
+FROM table1 a 
+JOIN table2 b ON 
 (a.userid = b.userid)) x
-group by mnth, yr, country, region
+GROUP BY mnth, yr, country, region
 ;
 ```
