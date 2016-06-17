@@ -38,6 +38,7 @@ join table2 b ON
 group by month(date_posted), year(date_posted), country, region
 ;
 
+--- Less taxing count distinct query
 SELECT, mnth, yr, country, region, count(userid) from
 (select distinct month(date_posted) as mnth, year(date_posted) as yr, country, region, a.userid 
 from table1 a 
